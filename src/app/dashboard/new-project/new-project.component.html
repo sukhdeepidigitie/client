@@ -1,0 +1,112 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="header">
+            <h4 class="title">Add Project </h4>
+          </div>
+          <div class="content">
+            <form [formGroup]="newProject" (ngSubmit)="onSubmit()" (change)="formUpdated()" novalidate>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label>Company Name</label>
+                    <input type="text" class="form-control" formControlName="company" required placeholder="Company">
+                    <div *ngIf="formErrors.company" class="alert alert-danger">
+                      {{ formErrors.company }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label>Protocol</label>
+                    <input type="text" class="form-control" formControlName="protocol" required placeholder="Protocol">
+                    <div *ngIf="formErrors.protocol" class="alert alert-danger">
+                      {{ formErrors.protocol }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Sponsor</label>
+                    <input type="text" class="form-control" formControlName="sponsor" required placeholder="sponsor">
+                    <div *ngIf="formErrors.sponsor" class="alert alert-danger">
+                      {{ formErrors.sponsor }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Investigator First Name</label>
+                    <input type="text" class="form-control" formControlName="ioofficerf" required placeholder="first name">
+                    <div *ngIf="formErrors.ioofficerf" class="alert alert-danger">
+                      {{ formErrors.ioofficerf }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" formControlName="ioofficerl" placeholder="last name">
+                    <div *ngIf="formErrors.ioofficerl" class="alert alert-danger">
+                      {{ formErrors.ioofficerl }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" class="form-control" formControlName="address" required placeholder="Permanent Address">
+                    <div *ngIf="formErrors.address" class="alert alert-danger">
+                      {{ formErrors.address }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control" formControlName="city" required placeholder="City">
+                    <div *ngIf="formErrors.city" class="alert alert-danger">
+                      {{ formErrors.city }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" class="form-control" formControlName="country" required placeholder="Country">
+                    <div *ngIf="formErrors.country" class="alert alert-danger">
+                      {{ formErrors.country }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Postal Code</label>
+                    <input type="number" class="form-control" formControlName="pcode" required placeholder="ZIP Code">
+                    <div *ngIf="formErrors.pcode" class="alert alert-danger">
+                      {{ formErrors.pcode }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-info btn-fill pull-right">Save</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

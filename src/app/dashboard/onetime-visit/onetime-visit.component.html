@@ -1,0 +1,112 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="header">
+            <h4 class="title">One Time Client </h4>
+          </div>
+          <div class="content">
+            <form [formGroup]="oneTimeVisit" (ngSubmit)="onSubmit()" (change)="formUpdated()" novalidate>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label> Full Name</label>
+                    <input type="text" class="form-control" formControlName="name" required placeholder="Name">
+                    <div *ngIf="formErrors.name" class="alert alert-danger">
+                      {{ formErrors.name }}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label> Date of birth</label>
+                    <input type="text" class="form-control" formControlName="dob" required placeholder="Date of birth">
+                    <div *ngIf="formErrors.dob" class="alert alert-danger">
+                      {{ formErrors.dob }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label> Unique Identification (UID)</label>
+                    <input type="text" class="form-control" formControlName="uid" required placeholder="UID">
+                    <div *ngIf="formErrors.uid" class="alert alert-danger">
+                      {{ formErrors.uid }}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label> Mobile Number</label>
+                    <input type="text" class="form-control" formControlName="mnumber" required placeholder="Mobile Number">
+                    <div *ngIf="formErrors.mnumber" class="alert alert-danger">
+                      {{ formErrors.mnumber }}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label> Investigation Officer</label>
+                    <input type="text" class="form-control" formControlName="ioofficer" required placeholder="Investigation Officer">
+                    <div *ngIf="formErrors.ioofficer" class="alert alert-danger">
+                      {{ formErrors.ioofficer }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" class="form-control" formControlName="address" required placeholder="Permanent Address">
+                    <div *ngIf="formErrors.address" class="alert alert-danger">
+                      {{ formErrors.address }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control" formControlName="city" required placeholder="City">
+                    <div *ngIf="formErrors.city" class="alert alert-danger">
+                      {{ formErrors.city }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" class="form-control" formControlName="country" required placeholder="Country">
+                    <div *ngIf="formErrors.country" class="alert alert-danger">
+                      {{ formErrors.country }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Postal Code</label>
+                    <input type="number" class="form-control" formControlName="pcode" required placeholder="ZIP Code">
+                    <div *ngIf="formErrors.pcode" class="alert alert-danger">
+                      {{ formErrors.pcode }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <button type="submit" class="btn btn-info btn-fill pull-right">Save</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
